@@ -1,0 +1,49 @@
+.catalogues-disabled__wrapper{
+    position:relative;
+
+    .catalogues-disabled__overlay{
+        position:absolute;
+        right:0;
+        left:0;
+        top:0;
+        bottom:0;
+        z-index:99999;
+        background:rgba(252, 252, 252, 0.75) none repeat scroll 0% 0%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        strong{
+            font-size:rem-calc(25px);
+            font-weight:400;
+        }
+    }
+}
+
+.catalogues__sidebar-form{
+    margin-left:52px;
+    margin-top: 26px;
+    min-height:800px;
+}
+
+.catalogues-sidebar{
+    @include breakpoint(xlarge) {
+        padding-right:26px;
+    }
+}
+
+.catalogues-form__wrapper{
+
+  @include breakpoint(xlarge) {
+      position:relative;
+
+     &::before {
+        content:"";
+        position:absolute;
+        height: 100%;
+        width: 26px;
+        background-color: $secondary-color;
+    }
+  }
+}

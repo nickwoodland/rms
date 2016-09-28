@@ -1,0 +1,23 @@
+.product-gallery__wrapper{
+
+
+    ul{
+        margin:0px;
+    }
+
+    .slick-track{
+        margin:0px auto;
+
+        .slick-slide img{
+            margin: 0px auto;
+        }
+    }
+}
+
+.sync-carousel--head__wrapper{
+    margin-bottom:rem-calc($rem-base);
+}
+
+.product-gallery__single{
+    text-align:center;
+}

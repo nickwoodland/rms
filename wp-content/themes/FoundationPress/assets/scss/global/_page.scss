@@ -1,0 +1,119 @@
+#page-full-width{
+
+        article.page, article.nothing-found{
+            padding-right:rem-calc(10px);
+            padding-left:rem-calc(10px);
+
+            @include breakpoint(large) {
+                padding-right:rem-calc(30px);
+                padding-left:rem-calc(30px);
+            }
+
+            @include breakpoint(xxxlarge) {
+                padding-left:0px;
+            }
+        }
+}
+
+
+.site-title{
+    text-align:center;
+
+    @include breakpoint(medium) {
+      text-align:left;
+    }
+
+    .site-title--primary, .site-title--secondary{
+        height:0px;
+        width:0px;
+        visibility: hidden;
+        overflow: hidden;
+    }
+
+    .site-logo--img{
+        width:300px;
+        height:auto;
+    }
+    /*h1,h2{
+        margin:0px;
+        font-weight:800;
+        font-family: $secondary-font-family
+    }
+
+    .site-title--primary a, .site-title--primary{
+            font-size:rem-calc(45px);
+            color: $primary-color;
+            line-height:0.8;
+    }
+    .site-title--secondary a, .site-title--secondary{
+        font-size:rem-calc(26px);
+        color: $body-font-color;
+        text-transform: lowercase;
+        line-height:0.8;
+    }*/
+}
+
+.header-phone{
+    text-align:center;
+
+    @include breakpoint(medium) {
+      text-align:right;
+      margin-top:30px;
+      line-height:1;
+    }
+
+    a{
+        font-size:rem-calc(20px);
+        color: $body-font-color;
+        text-transform: lowercase;
+        font-weight:800;
+        font-family: $secondary-font-family;
+
+        @include breakpoint(medium) {
+          font-size:rem-calc(26px);
+        }
+    }
+}
+
+
+article.page{
+    header h1.entry-title{
+        margin-bottom:30px;
+        margin-top: 30px;
+        line-height:1;
+        font-size:rem-calc(30px);
+
+    }
+
+    .entry-content{
+        font-family:$secondary-font-family;
+        font-size:rem-calc(15px);
+    }
+}
+
+.contact__address{
+    font-family:$secondary-font-family;
+    font-size:rem-calc(15px);
+    address{
+        text-decoration: none;
+        font-style:normal;
+    }
+}
+
+.page-flag-sidebar{
+    .entry-content{
+        padding-right:20px;
+    }
+}
+
+
+.sidebar-slider{
+    margin-left:52px;
+    margin-bottom:26px;
+}
+
+article.nothing-found{
+    .page-header,.page-content{
+        text-transform:lowercase;
+    }
+}

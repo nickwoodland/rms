@@ -1,0 +1,69 @@
+body{
+    .container{
+        .gform_wrapper{
+        margin-top:0px;
+        }
+        .gform_fields{
+
+            input,textarea,select{
+                border-radius:rem-calc($rem-base);
+                border-color: $body-font-color;
+                font-family: $secondary-font-family;
+                font-size:14px;
+            }
+
+            .gfield_label {
+                font-size:rem-calc(14px);
+                font-family: $secondary-font-family;
+                text-transform: lowercase;
+                line-height:1;
+                color: $body-font-color;
+            }
+
+            .ginput_complex label {
+                font-size:rem-calc(12px);
+                font-family: $secondary-font-family;
+                text-transform: lowercase;
+                line-height:1;
+                color: lighten($body-font-color, 10%);
+                margin-top:-10px;
+                margin-bottom:$rem-base;
+            }
+        }
+    }
+    .gfield_checkbox li label, .gfield_radio li label{
+        font-size:rem-calc(14px);
+        font-family: $secondary-font-family;
+        text-transform: lowercase;
+        line-height:1;
+        color: $body-font-color;
+    }
+}
+
+
+.overlay__form{
+
+    width:90%;
+    margin-top:$rem-base*2;
+
+    @include breakpoint(large) {
+        width:40%;
+    }
+
+    input[type='text'],input[type='password'],textarea,select{
+        border-radius:rem-calc($rem-base);
+        border-color: $body-font-color;
+    }
+
+    input[type='submit']{
+        @extend .button;
+    }
+
+    label{
+        text-transform: lowercase;
+    }
+
+    #wp-submit{
+        text-transform: lowercase;
+    }
+}

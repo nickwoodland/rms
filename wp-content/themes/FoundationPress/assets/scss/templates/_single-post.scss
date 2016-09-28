@@ -1,0 +1,26 @@
+#single-post {
+  @include grid-row();
+
+  .main-content {
+    @include breakpoint(small) {
+      @include grid-column(12);
+    }
+
+    @include breakpoint(medium) {
+      @include grid-column(8);
+    }
+  }
+
+  header h1.entry-title{
+      margin-bottom:30px;
+      margin-top: 30px;
+      line-height:1;
+      font-size:rem-calc(30px);
+  }
+
+  .entry-content{
+      font-family: $secondary-font-family;
+      font-size:rem-calc(15px);
+  }
+
+}

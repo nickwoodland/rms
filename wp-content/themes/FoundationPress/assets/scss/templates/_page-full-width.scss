@@ -1,0 +1,15 @@
+#page-full-width {
+  @include grid-row();
+
+  .main-content {
+    @include breakpoint(small) {
+      @include grid-column(12);
+    }
+
+    @include breakpoint(xlarge) {
+      @include grid-column-collapse;
+    }
+
+  }
+
+}

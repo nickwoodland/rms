@@ -1,0 +1,31 @@
+.mobile-nav__wrapper{
+    max-width:rem-calc(600);
+
+    margin:0px auto;
+
+    margin-top:rem-calc($rem-base);
+    margin-bottom: rem-calc($rem-base);
+
+
+    @include breakpoint(large) {
+        display:none;
+    }
+
+    nav{
+        background-color: $white;
+        padding:rem-calc($rem-base);
+
+        ul{
+            text-align:center;
+
+            li{
+                border-bottom:1px solid $light-gray;
+            }
+        }
+    }
+
+}
+
+body.js .mobile-nav{
+    display:none;
+}

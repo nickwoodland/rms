@@ -1,0 +1,70 @@
+.product-table__wrapper{
+    font-family: 'helvetica neue', Helvetica, sans-serif;
+    font-size: rem-calc($rem-base*0.8);
+
+    @include breakpoint(xxlarge) {
+        padding-left:$rem-base*2;
+    }
+
+    .tablepress{
+
+        tbody, tbody td, thead th{
+            border:1px solid #1b1985;
+        }
+
+        .odd td{
+            background: 0 0;
+
+        }
+        tbody td.column-1{
+            // background-color: #c7c5c5;
+        }
+
+        .row-1 td{
+            //background-color: #ededed;
+        }
+
+
+        &.highlight{
+            tr{
+
+                &.row-highlight-blue{
+                    td{
+                    background-color: #D4EAF6;
+                    }
+                }
+
+                &.row-highlight-lgrey{
+                    td{
+                    background-color: #EAEAEA;
+                    }
+                }
+
+                &.row-highlight-dgrey{
+                    td{
+                    background-color: #CFCECF;
+                    }
+                }
+
+
+                &.row-highlight-bold{
+                    td{
+                    font-weight:bold;
+                    }
+                }
+
+                td:last-of-type{
+                    display:none;
+                }
+            }
+
+            thead{
+                th:last-of-type{
+                    display:none;
+                }
+            }
+        }
+    }
+
+
+}

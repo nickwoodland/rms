@@ -1,0 +1,46 @@
+.head-flag__wrapper{
+    position:relative;
+
+   &::after {
+      content:"";
+      position:absolute;
+      height: 100%;
+      width: 26px;
+      background-color: $secondary-color;
+  }
+}
+
+.head-flag{
+    position:absolute;
+    top:0px;
+    left:52px;
+    right:0px;
+    bottom:26px;
+    background:url('../images/flag-top-final.png');
+    background-size:100%;
+    background-repeat:no-repeat;
+    background-position: bottom;
+}
+
+.fp-flag__wrapper{
+    position:relative;
+
+   &::before {
+      content:"";
+      position:absolute;
+      height: 100%;
+      width: 26px;
+      background-color: $secondary-color;
+  }
+}
+
+.fp-flag{
+    padding-bottom:52%;
+    margin-left:52px;
+    margin-top:26px;
+    margin-bottom:54px;
+    background:url('../images/flag-bottom-final.png');
+    background-size:100%;
+    background-repeat:no-repeat;
+    background-position: top;
+}
