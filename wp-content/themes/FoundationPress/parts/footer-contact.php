@@ -17,7 +17,7 @@
 
 <div class="footer__contact">
     <span class="footer__address">
-        Armorduct
+        RMS Electrical
         <?php if($add1 && "" != $add1): ?>
             <?php echo $add1; ?>
         <?php endif; ?>
@@ -52,5 +52,5 @@
     </span>
 </div>
 <div>
-    <span>CCAS registered ISO 9001 - UKAS management system 055</span>
+    <span>Comapny Registration no. 02802948</span>
 </div>

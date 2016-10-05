@@ -2,28 +2,27 @@
 
     position:relative;
 
-    .top-bar__top, .top-bar__nav{
+    .top-bar__top{
         padding-right:rem-calc(10px);
         padding-left:rem-calc(10px);
 
         @include breakpoint(large) {
-            padding-right:rem-calc(30px);
-            padding-left:rem-calc(30px);
+            padding-right:rem-calc(60px);
+            padding-left:rem-calc(60px);
         }
 
-        @include breakpoint(xxxlarge) {
-            padding-left:0px;
-        }
     }
 
     .top-bar__top{
         margin-top:rem-calc(45px);
-        margin-bottom:rem-calc(75px);
+        margin-bottom:rem-calc(45px);
     }
 
     .top-bar__nav{
         margin-bottom:rem-calc(5px);
+        margin-top:rem-calc(22px);
         font-size:rem-calc(22px);
+        text-align:right;
 
         .home-icon__wrapper{
             position:relative;
@@ -81,7 +80,7 @@
     border: 0;
   }
 
-  &::after {
+ /* &::after {
     width: 100%;
     height: 26px;
     background-image: -o-linear-gradient(right, $secondary-color 60%, transparent);
@@ -89,7 +88,7 @@
     background-image: -webkit-linear-gradient(right, $secondary-color 60%, transparent);
     background-image: -moz-linear-gradient(right, $secondary-color 60%, transparent);
     background-image: linear-gradient(to left, $secondary-color 60%, transparent);
-   }
+}*/
 
 
 }
@@ -125,10 +124,12 @@
 }
 
 .flex-menu{
+    display:inline-block;
+    margin-right:rem-calc(24px);
     ul:first-child{
         display:flex;
         flex-direction:row;
-        justify-content:space-around;
+        justify-content:flex-end;
 
         li{
             display:inline-block;

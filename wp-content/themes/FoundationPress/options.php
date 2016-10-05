@@ -218,30 +218,6 @@ function optionsframework_options() {
 		'class' => 'mini',
 		'type' => 'text');
 
-	$options[] = array(
-		'name' => __('Page Sidebar Images', 'options_framework_theme'),
-		'type' => 'heading');
-
-	$options[] = array(
-		'name' => __('Image 1', 'options_framework_theme'),
-//		'desc' => __('Enter your Country (eg: England)', 'options_framework_theme'),
-		'id' => 'sidebar_img_1',
-		'std' => '',
-		'type' => 'upload');
-
-	$options[] = array(
-		'name' => __('Image 2', 'options_framework_theme'),
-//		'desc' => __('Enter your Country (eg: England)', 'options_framework_theme'),
-		'id' => 'sidebar_img_2',
-		'std' => '',
-		'type' => 'upload');
-
-	$options[] = array(
-		'name' => __('Image 3', 'options_framework_theme'),
-//		'desc' => __('Enter your Country (eg: England)', 'options_framework_theme'),
-		'id' => 'sidebar_img_3',
-		'std' => '',
-		'type' => 'upload');
 
 
 

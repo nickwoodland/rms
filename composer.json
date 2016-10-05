@@ -26,12 +26,12 @@
       "wpackagist-plugin/regenerate-thumbnails": "~2.2.6",
       "wpackagist-plugin/better-wp-security": "~5.6.0",
       "wpackagist-plugin/redirection": "~2.4.3",
-      "wpackagist-plugin/disable-comments": "~1.4",
-      "wpackagist-plugin/wordpress-seo": "~3.4.0",
+      "wpackagist-plugin/disable-comments": "~1.5",
+      "wpackagist-plugin/wordpress-seo": "~3.6.0",
       "wpackagist-plugin/user-role-editor": "~4.25",
       "wpackagist-plugin/tablepress": "1.7",
       "wpackagist-plugin/animated-gif-resize": "1.0",
       "wpackagist-plugin/taxonomy-terms-order": "~1.4.7",
-      "wpackagist-plugin/relevanssi": "3.5.3"
+      "wpackagist-plugin/relevanssi": "~3.5.3"
   }
 }

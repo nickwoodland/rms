@@ -34,27 +34,32 @@ get_header(); ?>
 
         <?php if(!empty($product_type_terms)): ?>
 
-            <div class="row collapse">
+            <div class="row">
+                <div class="row collapse">
+                    <div class="columns small-12 large-10 large-offset-1">
 
-                <?php include(locate_template('parts/product-type-term-loop.php')); ?>
+                    <?php include(locate_template('parts/product-type-term-loop.php')); ?>
 
-                <?php if($painting_finishing): ?>
-                    <div class="columns small-6 medium-4 large-3 end">
+                    <?php if($painting_finishing): ?>
+                        <div class="columns small-6 medium-4 large-3 end">
 
-                        <?php $term_image_id = get_post_thumbnail_id($painting_finishing->ID); ?>
-                        <?php $grid_interchange_string = grid_interchange_string($term_image_id); ?>
+                            <?php $term_image_id = get_post_thumbnail_id($painting_finishing->ID); ?>
+                            <?php $grid_interchange_string = grid_interchange_string($term_image_id); ?>
 
-                        <article class="grid-block" data-interchange="<?php echo $grid_interchange_string; ?>">
-                            <div class="grid-block__inner">
-                                <a class="grid-block__link" href="<?php echo get_permalink($painting_finishing->ID); ?>">
-                                    <h3 class="grid-block__title"><?php echo get_the_title($painting_finishing->ID); ?></h3>
-                                </a>
-                            </div>
-                        </article>
+                            <article class="grid-block" data-interchange="<?php echo $grid_interchange_string; ?>">
+                                <div class="grid-block__inner">
+                                    <a class="grid-block__link" href="<?php echo get_permalink($painting_finishing->ID); ?>">
+                                        <h3 class="grid-block__title"><?php echo get_the_title($painting_finishing->ID); ?></h3>
+                                    </a>
+                                </div>
+                            </article>
+
+                        </div>
+                    <?php endif; ?>
 
                     </div>
-                <?php endif; ?>
 
+                </div>
             </div>
 
         <?php else : ?>

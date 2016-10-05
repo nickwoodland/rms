@@ -1,3 +1,8 @@
+.search__wrapper{
+    display:inline-block;
+    width:22px;
+    height:22px;
+}
 #searchform{
 
     position:relative;
@@ -43,9 +48,9 @@
         position:absolute;
         right:10px;
         pointer-events: none;
-        bottom:12px;
+        bottom:8px;
         font-size:26px;
-        color: $primary-color;
+        color: $body-font-color;
         background-color: darken($white, 5%);
     }
 

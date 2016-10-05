@@ -31,58 +31,48 @@
 
 		<div class="main-navigation top-bar">
 
-			<div class="row collapse" data-equalizer data-equalize-on="large">
+			<div class="row top-bar__top" >
 
-				<div class="columns xlarge-9 large-12" data-equalizer-watch>
+				<div class="columns medium-4">
+					<div class="site-title">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<img class="site-logo--img" src="<?php echo get_stylesheet_directory_uri(). '/assets/images/site-logo.png'; ?>" />
+						</a>
+						<h1 class="site-title--primary"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">RMS</a></h1>
+						<h2 class="site-title--secondary"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Specialists In Cable Management</a></h2>
+					</div>
+				</div>
 
-					<div class="row top-bar__top" >
+				<div class="columns medium-8">
 
-						<div class="columns medium-6">
-							<div class="site-title">
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-									<img class="site-logo--img" src="<?php echo get_stylesheet_directory_uri(). '/assets/images/site-logo.png'; ?>" />
-								</a>
-								<h1 class="site-title--primary"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Armorduct</a></h1>
-								<h2 class="site-title--secondary"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Cable Management</a></h2>
-							</div>
-						</div>
+					<?php $phone = false; ?>
+                    <?php $email = false; ?>
+					<?php $phone = of_get_option('contact_telephone'); ?>
+                    <?php $email = of_get_option('contact_email'); ?>
 
-						<div class="columns medium-6">
-							<div class="header-phone">
-								<?php $phone = false; ?>
-								<?php $phone = of_get_option('contact_telephone'); ?>
-									<?php if($phone && "" != $phone ): ?>
-										<a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
-									<?php endif; ?>
-								<?php /* if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>
-									<?php get_template_part( 'parts/mobile-top-bar' ); ?>
-								<?php endif; */ ?>
-							</div>
-						</div>
+					<div class="header-phone">
+						<?php if($phone && "" != $phone ): ?>
+							<a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
+						<?php endif; ?>
 					</div>
 
+                    <div class="header-email">
+						<?php if($email && "" != $email ): ?>
+							<a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
+						<?php endif; ?>
+                    </div>
+
 					<nav class="row collapse top-bar__nav">
-
-						<div class="columns small-1 home-icon__wrapper">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="home-icon">Home</a>
-						</div>
-
-						<div class="columns small-9 show-for-large flex-menu">
+						<div class="show-for-large flex-menu">
 							<?php foundationpress_primary_menu(); ?>
 						</div>
 
-						<div class="columns small-2">
-							<?php get_search_form( 'true' ); ?>
-						</div>
-
+						<?php get_search_form( 'true' ); ?>
 					</nav>
 
 				</div>
 
-				<div class="columns large-3 show-for-xlarge head-flag__wrapper" data-equalizer-watch>
-					<div class="head-flag">
-					</div>
-				</div>
+            </div>
 
 		</div>
 
