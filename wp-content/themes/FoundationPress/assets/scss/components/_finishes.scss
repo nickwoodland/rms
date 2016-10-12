@@ -11,7 +11,8 @@
         display:none;
         width:15%;
         font-family:$secondary-font-family;
-        font-size:rem-calc(14px);
+        font-size:rem-calc($rem-base);
+        font-weight:600;
 
         @include breakpoint(large) {
             display:inline-block;

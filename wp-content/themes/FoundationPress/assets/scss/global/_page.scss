@@ -37,22 +37,23 @@
 
 .header-phone{
     text-align:center;
+    margin-bottom:rem-calc(12px);
+
 
     @include breakpoint(medium) {
       text-align:right;
-      margin-top:30px;
       line-height:1;
     }
 
     a{
-        font-size:rem-calc(20px);
+        font-size:rem-calc(26px);
         color: $supply;
         text-transform: lowercase;
         font-weight:800;
         font-family: $body-font-family;
 
         @include breakpoint(medium) {
-          font-size:rem-calc(26px);
+          font-size:rem-calc(38px);
         }
     }
 }
@@ -66,7 +67,7 @@
     }
 
     a{
-        font-size:rem-calc(20px);
+        font-size:rem-calc(22px);
         color: $supply;
         text-transform: lowercase;
         font-weight:800;
@@ -80,28 +81,89 @@
 }
 
 
-article.page{
-    header h1.entry-title{
-        margin-bottom:30px;
-        line-height:2;
-        font-size:rem-calc(30px);
-        background-color:$supply;
-        color: $white;
-        padding-left:rem-calc(200px);
 
+.bg--header {
+    background-color:$supply;
+    color: $white;
 
+    &.header--margin {
+        margin-bottom:rem-calc(30px);
     }
 
-    .entry-content{
-        font-family:$secondary-font-family;
+    .header__inner{
+        display:inline-block;
+        text-align: center;
+        margin-top:rem-calc(12px);
+        margin-bottom:rem-calc(12px);
+        min-width:380px;
+        
+    }
+
+    .entry-title{
+        font-size:rem-calc(36px);
+        margin-bottom:0px;
+        text-transform: capitalize;
+        line-height:1;
+    }
+
+    .entry-subtitle{
         font-size:rem-calc(18px);
+        font-family:$body-font-family;
+        font-weight:600;
+        text-transform: uppercase;
+        line-height:1;
+        margin-top:rem-calc(12px);
+    }
+
+    &.red{
+        background-color: $respond;
+    }
+    &.blue{
+        background-color: $supply;
+    }
+    &.grey{
+        background-color: $manufacture;
+    }
+
+    &.product{
+        margin-bottom:0px;
+    }
+
+
+}
+
+.banner-slider{
+
+    margin-bottom:rem-calc(30px);
+
+    .slide{
+        height:0px;
+        padding-bottom:20%;
+        overflow:hidden;
+        background-size:cover;
+        background-position: center;
+        margin-right: -1px;
+        position:relative;
+        background-repeat:no-repeat;
+    }
+}
+
+article.page{
+    .entry-content{
+        font-family:$body-font-family;
+        font-size:rem-calc(22);
         margin:0px auto;
+    }
+
+    .page-content{
+        margin-left:rem-calc(32px);
+        margin-right:rem-calc(32px);
     }
 }
 
 .contact__address{
-    font-family:$secondary-font-family;
-    font-size:rem-calc(15px);
+    font-family:$body-font-family;
+    font-size:rem-calc(18px);
     address{
         text-decoration: none;
         font-style:normal;
@@ -114,7 +176,7 @@ article.nothing-found{
     }
 }
 
-.banner-main{
+/*.banner-main{
     padding-right:rem-calc(10px);
     padding-left:rem-calc(10px);
     margin-bottom:rem-calc(60px);
@@ -124,4 +186,9 @@ article.nothing-found{
         padding-left:rem-calc(60px);
     }
 
+}*/
+
+.banner-main{
+    margin-bottom:rem-calc(60px);
+    margin-top:rem-calc(60px);
 }

@@ -32,35 +32,40 @@ get_header(); ?>
 <?php $product_type_terms = get_terms('product-types',$product_type_args ); ?>
 <div id="page-full-width" role="main">
 
+        <?php include(locate_template('parts/banner-header-archive.php')); ?>
+
         <?php if(!empty($product_type_terms)): ?>
 
-            <div class="row">
-                <div class="row collapse">
+                <div class="row">
                     <div class="columns small-12 large-10 large-offset-1">
 
-                    <?php include(locate_template('parts/product-type-term-loop.php')); ?>
+                        <div class="row collapse">
 
-                    <?php if($painting_finishing): ?>
-                        <div class="columns small-6 medium-4 large-3 end">
 
-                            <?php $term_image_id = get_post_thumbnail_id($painting_finishing->ID); ?>
-                            <?php $grid_interchange_string = grid_interchange_string($term_image_id); ?>
+                        <?php include(locate_template('parts/product-type-term-loop.php')); ?>
 
-                            <article class="grid-block" data-interchange="<?php echo $grid_interchange_string; ?>">
-                                <div class="grid-block__inner">
-                                    <a class="grid-block__link" href="<?php echo get_permalink($painting_finishing->ID); ?>">
-                                        <h3 class="grid-block__title"><?php echo get_the_title($painting_finishing->ID); ?></h3>
-                                    </a>
-                                </div>
-                            </article>
+                        <?php if($painting_finishing): ?>
+                            <div class="columns small-6 medium-4 large-3 end">
+
+                                <?php $term_image_id = get_post_thumbnail_id($painting_finishing->ID); ?>
+                                <?php $grid_interchange_string = grid_interchange_string($term_image_id); ?>
+
+                                <article class="grid-block" data-interchange="<?php echo $grid_interchange_string; ?>">
+                                    <div class="grid-block__inner">
+                                        <a class="grid-block__link" href="<?php echo get_permalink($painting_finishing->ID); ?>">
+                                            <h3 class="grid-block__title"><?php echo get_the_title($painting_finishing->ID); ?></h3>
+                                        </a>
+                                    </div>
+                                </article>
+
+                            </div>
+                        <?php endif; ?>
 
                         </div>
-                    <?php endif; ?>
 
                     </div>
 
                 </div>
-            </div>
 
         <?php else : ?>
 

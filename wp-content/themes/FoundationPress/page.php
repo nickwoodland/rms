@@ -3,21 +3,21 @@
 Template Name: Full Width
 */
 get_header(); ?>
+
 <div id="page-full-width" role="main">
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 <?php while ( have_posts() ) : the_post(); ?>
-
+    <?php include(locate_template('parts/banner-header.php')); ?>
     <article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
-      <header>
-          <h1 class="entry-title"><?php the_title(); ?></h1>
-      </header>
       <?php do_action( 'foundationpress_page_before_entry_content' ); ?>
       <?php // get_template_part( 'parts/featured-image' ); ?>
       <div class="entry-content">
           <div class="row collapse">
               <div class="columns small-12 large-10 large-offset-1">
-                  <?php the_content(); ?>
+                  <div class="page-content">
+                      <?php the_content(); ?>
+                  </div>
               </div>
           </div>
       </div>

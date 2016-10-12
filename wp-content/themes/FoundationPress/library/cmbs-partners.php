@@ -80,7 +80,7 @@ function partners_sub_page_metaboxes() {
     $prefix = '_partners_page_';
 
     $options[0]='Please select...';
-    if( class_exists( RGFormsModel ) ) {
+    if( class_exists( 'RGFormsModel' ) ) {
         foreach( RGFormsModel::get_forms(null, 'title') AS $form):
             $options[$form->id] = $form->title;
         endforeach;

@@ -21,7 +21,7 @@
         box-shadow:none;
         right:39px;
         height:42px;
-        top:0px;
+        top:4px;
         width:0px;
         background-color: darken($white, 5%);
         padding:0px;
@@ -30,7 +30,7 @@
         width:200px;
         padding:10px;
         transition:width 0.25s linear;
-        font-family:$secondary-font-family;
+        font-family:$body-font-family;
     }
 
     .searchsubmit{
@@ -40,7 +40,7 @@
         height:42px;
         margin:0px;
         right:0px;
-        top: 0px;
+        top: 4px;
         background-color: darken($white, 5%);
     }
 

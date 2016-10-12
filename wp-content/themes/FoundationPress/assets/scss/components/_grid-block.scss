@@ -1,3 +1,106 @@
+.grid-block--fullwidth{
+
+    position:relative;
+            margin-bottom:rem-calc(60px);
+
+
+    .grid-block{
+        height:0px;
+        padding-bottom:17%;
+    }
+
+    .grid-block__title-wrapper{
+        position:absolute;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        top:0px;
+        bottom:0px;
+        left:0px;
+        right:0px;
+    }
+
+    .grid-block__link{
+        display:flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .grid-block__title{
+        max-width:rem-calc(500px);
+        padding-left:rem-calc(45px);
+        font-size: rem-calc(22px);
+        width:100%;
+        display:inline;
+        color: $white;
+        height:rem-calc(80px);
+        line-height:rem-calc(80px);
+        z-index:9999;
+
+        &.red{
+            background-color: $respond;
+        }
+        &.blue{
+            background-color: $supply;
+        }
+        &.grey{
+            background-color: $manufacture;
+        }
+    }
+}
+
+.grid-block--circle{
+    position:relative;
+    padding:rem-calc(22px);
+
+    .grid-block__title-wrapper{
+        position:absolute;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        top:0px;
+        bottom:0px;
+        left:0px;
+        right:0px;
+    }
+    .grid-block__title{
+        z-index:9999;
+        text-align: center;
+        width:100%;
+        padding-top:rem-calc(10px);
+        padding-bottom:rem-calc(12px);
+        color: $white;
+
+        h3,h4{
+            line-height: 1;
+            margin:0px;
+        }
+
+        h3{
+        }
+
+        h4{
+            margin-top:rem-calc(8px);
+            font-family: $body-font-family;
+        }
+
+        &.red{
+            background-color: $respond;
+        }
+        &.blue{
+            background-color: $supply;
+        }
+        &.grey{
+            background-color: $manufacture;
+        }
+    }
+
+    .grid-block__zoom{
+        border-radius:9999px;
+    }
+}
 .grid-block{
     height:0px;
     padding-bottom:72%;
@@ -8,9 +111,8 @@
     position:relative;
     background-repeat:no-repeat;
 
-    &.grid-block--fullwidth{
-        padding-bottom:20%;
-        margin-bottom:rem-calc(60px);
+    .grid-block__title{
+        font-family: $header-font-family;
     }
 
     &.grid-block--banner{
@@ -26,29 +128,20 @@
         bottom:0px;
     }
 
-    &.grid-block--fullwidth .grid-block__link{
-        display:flex;
-        flex-direction: row;
-        align-content: center;
-        justify-content: flex-start;
-        align-items: center;
-    }
-
     &:not(.grid-block--fullwidth) .grid-block__title{
         position: absolute;
         bottom: 0px;
         width: 80%;
         color: $white;
         text-align: center;
-        background: rgb(72, 108, 142);
-        background: rgba(72, 108, 142, 0.8);
+        background: $manufacture;
         margin: 0px auto;
         left: 0px;
         right: 0px;
-        border-top-right-radius: rem-calc($rem-base);
-        border-top-left-radius: rem-calc($rem-base);
         padding-top: rem-calc($rem-base);
         padding-bottom: rem-calc($rem-base);
+        font-size:rem-calc(22px);
+        text-transform: capitalize;
 
         &.grid-block__title--hidden{
             bottom: -100px;
@@ -60,32 +153,29 @@
         visibility: hidden;
     }
 
-    &.grid-block--fullwidth .grid-block__title{
-        max-width:rem-calc(400px);
-        padding-left:rem-calc(25px);
-        width:100%;
-        display:inline;
-        color: $white;
-        height:rem-calc(80px);
-        line-height:rem-calc(80px);
-
-        &.red{
-            background-color: $respond;
-        }
-        &.blue{
-            background-color: $supply;
-        }
-        &.grey{
-            background-color: $manufacture;
-        }
-    }
-
     .grid-block__link{
 
         &:hover .grid-block__title--hidden{
             bottom:0px;
             transition:bottom 0.25s linear;
         }
+    }
+}
+
+.grid-block__zoom{
+
+    overflow:hidden;
+    background-color:$black;
+
+
+    .grid-block{
+        transition: all 0.3s;
+
+    }
+
+    .grid-block:hover{
+        transform: scale(1.03);
+        opacity:0.8;
     }
 }
 

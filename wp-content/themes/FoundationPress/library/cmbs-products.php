@@ -14,7 +14,7 @@ function products_form_metaboxes() {
     $options_tables = array();
     $options_tables[0]='Please select...';
 
-    if( class_exists( TablePress ) ) {
+    if( class_exists( 'TablePress' ) ) {
         $table_q_args = array(
             'post_type' => 'tablepress_table',
             'posts_per_page' => -1

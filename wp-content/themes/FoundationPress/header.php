@@ -31,49 +31,56 @@
 
 		<div class="main-navigation top-bar">
 
-			<div class="row top-bar__top" >
+            <div class="row row--pad">
 
-				<div class="columns medium-4">
-					<div class="site-title">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<img class="site-logo--img" src="<?php echo get_stylesheet_directory_uri(). '/assets/images/site-logo.png'; ?>" />
-						</a>
-						<h1 class="site-title--primary"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">RMS</a></h1>
-						<h2 class="site-title--secondary"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Specialists In Cable Management</a></h2>
-					</div>
-				</div>
+            <div class="columns small-12">
 
-				<div class="columns medium-8">
+    			<div class="row top-bar__top" >
 
-					<?php $phone = false; ?>
-                    <?php $email = false; ?>
-					<?php $phone = of_get_option('contact_telephone'); ?>
-                    <?php $email = of_get_option('contact_email'); ?>
+    				<div class="columns medium-4">
+    					<div class="site-title">
+    						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+    							<img class="site-logo--img" src="<?php echo get_stylesheet_directory_uri(). '/assets/images/site-logo.png'; ?>" />
+    						</a>
+    						<h1 class="site-title--primary"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">RMS</a></h1>
+    						<h2 class="site-title--secondary"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Specialists In Cable Management</a></h2>
+    					</div>
+    				</div>
 
-					<div class="header-phone">
-						<?php if($phone && "" != $phone ): ?>
-							<a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
-						<?php endif; ?>
-					</div>
+    				<div class="columns medium-8">
 
-                    <div class="header-email">
-						<?php if($email && "" != $email ): ?>
-							<a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
-						<?php endif; ?>
-                    </div>
+    					<?php $phone = false; ?>
+                        <?php $email = false; ?>
+    					<?php $phone = of_get_option('contact_telephone'); ?>
+                        <?php $email = of_get_option('contact_email'); ?>
 
-					<nav class="row collapse top-bar__nav">
-						<div class="show-for-large flex-menu">
-							<?php foundationpress_primary_menu(); ?>
-						</div>
+    					<div class="header-phone">
+    						<?php if($phone && "" != $phone ): ?>
+    							<a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
+    						<?php endif; ?>
+    					</div>
 
-						<?php get_search_form( 'true' ); ?>
-					</nav>
+                        <div class="header-email">
+    						<?php if($email && "" != $email ): ?>
+    							<a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
+    						<?php endif; ?>
+                        </div>
 
-				</div>
+    					<nav class="row collapse top-bar__nav">
+    						<div class="show-for-large flex-menu">
+    							<?php foundationpress_primary_menu(); ?>
+    						</div>
+
+    						<?php get_search_form( 'true' ); ?>
+    					</nav>
+
+    				</div>
+
+                </div>
 
             </div>
 
+            </div>
 		</div>
 
 	</header>

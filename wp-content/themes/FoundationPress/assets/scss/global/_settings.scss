@@ -42,13 +42,26 @@
 @import '../../components/foundation-sites/scss/util/util';
 
 @font-face {
-    font-family: 'gasaltblack';
-    src: url('../fonts/gasalt-black/gasalt-black-webfont.eot');
-    src: url('../fonts/gasalt-black/gasalt-black-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/gasalt-black/gasalt-black-webfont.woff2') format('woff2'),
-         url('../fonts/gasalt-black/gasalt-black-webfont.woff') format('woff'),
-         url('../fonts/gasalt-black/gasalt-black-webfont.ttf') format('truetype'),
-         url('../fonts/gasalt-black/gasalt-black-webfont.svg#gasaltblack') format('svg');
+    font-family: 'caviar_dreamsregular';
+    src: url('../fonts/custom/caviar-dreams/caviardreams-webfont.eot');
+    src: url('../fonts/custom/caviar-dreams/caviardreams-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/custom/caviar-dreams/caviardreams-webfont.woff2') format('woff2'),
+         url('../fonts/custom/caviar-dreams/caviardreams-webfont.woff') format('woff'),
+         url('../fonts/custom/caviar-dreams/caviardreams-webfont.ttf') format('truetype'),
+         url('../fonts/custom/caviar-dreams/caviardreams-webfont.svg#caviar_dreamsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'conthraxsemibold';
+    src: url('../fonts/custom/conthrax/conthrax-sb-webfont.eot');
+    src: url('../fonts/custom/conthrax/conthrax-sb-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/custom/conthrax/conthrax-sb-webfont.woff2') format('woff2'),
+         url('../fonts/custom/conthrax/conthrax-sb-webfont.woff') format('woff'),
+         url('../fonts/custom/conthrax/conthrax-sb-webfont.ttf') format('truetype'),
+         url('../fonts/custom/conthrax/conthrax-sb-webfont.svg#conthraxsemibold') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -58,7 +71,7 @@
 
 // 1. Global
 // ---------
-$rem-base: 15px;
+$rem-base: 16px;
 $global-font-size: 18px;
 $global-width: rem-calc(1920);
 $global-lineheight: 1.5;
@@ -66,7 +79,7 @@ $global-lineheight: 1.5;
 $primary-color: #d01132;
 $secondary-color: #dd0330;
 $respond: #d01132;
-$manufacture: #aab2a8;
+$manufacture: #838281;
 $supply: #3fa9bc;
 
 $success-color: #3adb76;
@@ -81,8 +94,8 @@ $white: #fefefe;
 $body-background: $white;
 $body-font-color: #818285;
 
-$body-font-family: 'gasaltblack', Helvetica, Roboto, Arial, sans-serif;
-$secondary-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: 'caviar_dreamsregular', Helvetica, Roboto, Arial, sans-serif;
+$secondary-font-family: $body-font-family;
 $body-antialiased: true;
 
 $global-margin: 1rem;
@@ -120,7 +133,7 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: $body-font-family;
+$header-font-family: 'conthraxsemibold', Helvetica, Roboto, Arial, sans-serif;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;

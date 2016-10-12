@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
       focusOnSelect: true
     });
 
-    $('#sidebar-carousel').slick({
+    $('#header-carousel').slick({
       dots: false,
       arrows: false,
       autoplay: true,

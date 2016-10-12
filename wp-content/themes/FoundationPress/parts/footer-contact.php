@@ -52,5 +52,5 @@
     </span>
 </div>
 <div>
-    <span>Comapny Registration no. 02802948</span>
+    <span>Company Registration no. 02802948</span>
 </div>

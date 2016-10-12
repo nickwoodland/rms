@@ -27,23 +27,38 @@ get_header(); ?>
 
 <div id="page-full-width" role="main">
 
+        <?php include(locate_template('parts/banner-header-products.php')); ?>
+
+
         <?php if(!empty($child_terms)): ?>
 
-            <div class="row collapse">
+            <div class="row">
+                <div class="columns small-12 large-10 large-offset-1">
 
-                <?php include(locate_template('parts/product-type-child-term-loop.php')); ?>
+                    <div class="row collapse">
 
+                        <?php include(locate_template('parts/product-type-child-term-loop.php')); ?>
+
+                    </div>
+
+                </div>
             </div>
 
         <?php else : ?>
 
         	<?php if ( have_posts() ) : ?>
 
-                <div class="row collapse">
+                <div class="row">
+                    <div class="columns small-12 large-10 large-offset-1">
 
-                    <?php include(locate_template('parts/product-type-products-loop.php')); ?>
+                        <div class="row collapse">
 
+                            <?php include(locate_template('parts/product-type-products-loop.php')); ?>
+
+                        </div>
+                    </div>
                 </div>
+
 
         	<?php else : ?>
         			<?php get_template_part( 'content', 'none' ); ?>

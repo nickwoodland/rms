@@ -43,21 +43,41 @@ function fp_banner_metaboxes() {
 
     // Id's for group's fields only need to be unique for the group. Prefix is not needed.
     $cmb_primary->add_group_field( $group_field_id, array(
-        'name' => 'Banner Title',
+        'name' => 'Block Title',
         'id'   => 'title',
         'type' => 'text',
         // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
     ) );
 
     $cmb_primary->add_group_field( $group_field_id, array(
-        'name' => 'Banner Link',
+        'name' => 'Block Subtitle',
+        'id'   => 'subtitle',
+        'type' => 'text',
+        // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+    ) );
+
+    $cmb_primary->add_group_field( $group_field_id, array(
+        'name' => 'Block Title Colour',
+        'id'   => 'colour',
+        'type' => 'radio',
+        'options'          => array(
+            'red' => __( 'Red', 'cmb2' ),
+            'blue'   => __( 'Blue', 'cmb2' ),
+            'grey'     => __( 'Grey', 'cmb2' ),
+        ),
+        'default' => 'red',
+        // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+    ) );
+
+    $cmb_primary->add_group_field( $group_field_id, array(
+        'name' => 'Block Link',
         'description' => 'Write a short description for this entry',
         'id'   => 'link',
         'type' => 'text_url'
     ) );
 
     $cmb_primary->add_group_field( $group_field_id, array(
-        'name' => 'Banner Image',
+        'name' => 'Block Image',
         'id'   => 'image',
         'type' => 'file',
     ) );
@@ -81,6 +101,27 @@ function fp_banner_metaboxes() {
         'name' => 'Block Title',
         'id'   => 'title',
         'type' => 'text',
+        // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+    ) );
+
+    // Id's for group's fields only need to be unique for the group. Prefix is not needed.
+    $cmb_primary->add_group_field( $group_field_id, array(
+        'name' => 'Block Subtitle',
+        'id'   => 'subtitle',
+        'type' => 'text',
+        // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+    ) );
+
+    $cmb_primary->add_group_field( $group_field_id, array(
+        'name' => 'Block Title Colour',
+        'id'   => 'colour',
+        'type' => 'radio',
+        'options'          => array(
+            'red' => __( 'Red', 'cmb2' ),
+            'blue'   => __( 'Blue', 'cmb2' ),
+            'grey'     => __( 'Grey', 'cmb2' ),
+        ),
+        'default' => 'red',
         // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
     ) );
 
@@ -116,6 +157,27 @@ function fp_banner_metaboxes() {
         'name' => 'Block Title',
         'id'   => 'title',
         'type' => 'text',
+        // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+    ) );
+
+    // Id's for group's fields only need to be unique for the group. Prefix is not needed.
+    $cmb_primary->add_group_field( $group_field_id, array(
+        'name' => 'Block Subtitle',
+        'id'   => 'subtitle',
+        'type' => 'text',
+        // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+    ) );
+
+    $cmb_primary->add_group_field( $group_field_id, array(
+        'name' => 'Block Title Colour',
+        'id'   => 'colour',
+        'type' => 'radio',
+        'options'          => array(
+            'red' => __( 'Red', 'cmb2' ),
+            'blue'   => __( 'Blue', 'cmb2' ),
+            'grey'     => __( 'Grey', 'cmb2' ),
+        ),
+        'default' => 'red',
         // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
     ) );
 
@@ -165,14 +227,14 @@ function fp_banner_metaboxes() {
 
     // Id's for group's fields only need to be unique for the group. Prefix is not needed.
     $cmb->add_group_field( $group_field_id, array(
-        'name' => 'Block Title',
+        'name' => 'Banner Title',
         'id'   => 'title',
         'type' => 'text',
         // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
     ) );
 
     $cmb->add_group_field( $group_field_id, array(
-        'name' => 'Block Title Colour',
+        'name' => 'Banner Title Colour',
         'id'   => 'colour',
         'type' => 'radio',
         'options'          => array(
@@ -180,18 +242,19 @@ function fp_banner_metaboxes() {
             'blue'   => __( 'Blue', 'cmb2' ),
             'grey'     => __( 'Grey', 'cmb2' ),
         ),
+        'default' => 'red',
         // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
     ) );
 
     $cmb->add_group_field( $group_field_id, array(
-        'name' => 'Block Link',
+        'name' => 'Banner Link',
         'description' => 'Write a short description for this entry',
         'id'   => 'link',
         'type' => 'text_url'
     ) );
 
     $cmb->add_group_field( $group_field_id, array(
-        'name' => 'Block Image',
+        'name' => 'Banner Image',
         'id'   => 'image',
         'type' => 'file',
     ) );

@@ -68,6 +68,8 @@ require_once( 'library/cpt-catalogues.php');
 /** Products CMB */
 require_once( 'library/cmbs-products.php' );
 
+require_once( 'library/cmbs-page.php' );
+
 /** Products CMB */
 require_once( 'library/cmbs-catalogues.php' );
 
