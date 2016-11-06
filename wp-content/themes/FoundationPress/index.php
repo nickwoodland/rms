@@ -15,7 +15,7 @@
  */
 
 get_header(); ?>
-
+<?php include(locate_template('parts/banner-header-archive.php')); ?>
 <div id="page-full-width" role="main">
 
 	<?php if ( have_posts() ) : ?>

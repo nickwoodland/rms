@@ -8,6 +8,7 @@
 		@include grid-row();
 		padding: rem-calc(30) 0;
 		font-size:rem-calc($rem-base*1.2);
+        font-weight:800;
 		color: $white;
 		text-align:center;
 

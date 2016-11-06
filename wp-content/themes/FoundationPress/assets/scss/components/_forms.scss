@@ -5,6 +5,11 @@ body{
         }
         .gform_fields{
 
+          input[type="checkbox"],
+          input[type="radio"] {
+              margin-left:3px;
+          }
+
             input,textarea,select{
                 border-radius:rem-calc($rem-base);
                 border-color: $body-font-color;

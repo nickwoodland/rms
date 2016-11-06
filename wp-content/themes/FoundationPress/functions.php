@@ -14,7 +14,7 @@
  * @subpackage FoundationPress
  * @since FoundationPress 1.0.0
  */
-
+error_reporting(E_ALL ^ E_WARNING);
 /** Various clean up functions */
 require_once( 'library/cleanup.php' );
 
@@ -81,6 +81,9 @@ require_once( 'library/cmbs-fp.php' );
 
 /** partners page CMB */
 require_once( 'library/cmbs-partners.php' );
+
+require_once( 'library/cmbs-manufacture.php' );
+require_once( 'library/cmbs-respond.php' );
 
 /** finishes lookup array */
 require_once( 'library/finishes-lookup.php' );

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9fc9cfd9d3c5bdc1b6d62ea87c509cce",
-    "content-hash": "01ecfcc9cd3f2c7a917139fda294fb68",
+    "hash": "bcdacb99ed805b4d7c9b3dff3d538d96",
+    "content-hash": "bc817d72dc7975b31be65325b18815e7",
     "packages": [
         {
             "name": "composer/installers",
@@ -136,15 +136,15 @@
         },
         {
             "name": "wpackagist-plugin/better-wp-security",
-            "version": "5.6.2",
+            "version": "5.7.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/better-wp-security/",
-                "reference": "tags/5.6.2"
+                "reference": "tags/5.7.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/better-wp-security.5.6.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/better-wp-security.5.7.0.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -156,7 +156,7 @@
         },
         {
             "name": "wpackagist-plugin/cmb2",
-            "version": "2.2.2.1",
+            "version": "2.2.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/cmb2/",
@@ -216,15 +216,15 @@
         },
         {
             "name": "wpackagist-plugin/duplicate-post",
-            "version": "2.6",
+            "version": "3.0.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/duplicate-post/",
-                "reference": "tags/2.6"
+                "reference": "tags/3.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/duplicate-post.2.6.zip",
+                "url": "https://downloads.wordpress.org/plugin/duplicate-post.3.0.3.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -296,15 +296,15 @@
         },
         {
             "name": "wpackagist-plugin/relevanssi",
-            "version": "3.5.4",
+            "version": "3.5.6.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/relevanssi/",
-                "reference": "tags/3.5.4"
+                "reference": "tags/3.5.6.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/relevanssi.3.5.4.zip",
+                "url": "https://downloads.wordpress.org/plugin/relevanssi.3.5.6.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -355,16 +355,36 @@
             "homepage": "https://wordpress.org/plugins/taxonomy-terms-order/"
         },
         {
-            "name": "wpackagist-plugin/user-role-editor",
-            "version": "4.27.2",
+            "name": "wpackagist-plugin/tinymce-advanced",
+            "version": "4.4.1",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/user-role-editor/",
-                "reference": "tags/4.27.2"
+                "url": "https://plugins.svn.wordpress.org/tinymce-advanced/",
+                "reference": "tags/4.4.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/user-role-editor.4.27.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/tinymce-advanced.4.4.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/tinymce-advanced/"
+        },
+        {
+            "name": "wpackagist-plugin/user-role-editor",
+            "version": "4.28",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/user-role-editor/",
+                "reference": "tags/4.28"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/user-role-editor.4.28.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -376,15 +396,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "3.6",
+            "version": "3.7.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/3.6"
+                "reference": "tags/3.7.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.3.6.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.3.7.1.zip",
                 "reference": null,
                 "shasum": null
             },

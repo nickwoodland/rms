@@ -37,7 +37,8 @@
         color: $white;
         height:rem-calc(80px);
         line-height:rem-calc(80px);
-        z-index:9999;
+        z-index:1;
+        pointer-events: none;
 
         &.red{
             background-color: $respond;
@@ -55,6 +56,10 @@
     position:relative;
     padding:rem-calc(22px);
 
+    .grid-block{
+        border-radius:9999px;
+    }
+
     .grid-block__title-wrapper{
         position:absolute;
         display:flex;
@@ -64,14 +69,16 @@
         bottom:0px;
         left:0px;
         right:0px;
+
     }
     .grid-block__title{
-        z-index:9999;
+        z-index:1;
         text-align: center;
         width:100%;
         padding-top:rem-calc(10px);
         padding-bottom:rem-calc(12px);
         color: $white;
+        pointer-events: none;
 
         h3,h4{
             line-height: 1;
@@ -84,6 +91,9 @@
         h4{
             margin-top:rem-calc(8px);
             font-family: $body-font-family;
+            text-transform:uppercase;
+            font-size:rem-calc(17px);
+            font-weight:800;
         }
 
         &.red{
@@ -140,12 +150,22 @@
         right: 0px;
         padding-top: rem-calc($rem-base);
         padding-bottom: rem-calc($rem-base);
-        font-size:rem-calc(22px);
+        font-size:rem-calc($rem-base);
         text-transform: capitalize;
 
         &.grid-block__title--hidden{
             bottom: -100px;
             transition:bottom 0.25s linear;
+        }
+
+        &.red{
+            background-color: $respond;
+        }
+        &.blue{
+            background-color: $supply;
+        }
+        &.grey{
+            background-color: $manufacture;
         }
     }
 
@@ -162,6 +182,7 @@
     }
 }
 
+
 .grid-block__zoom{
 
     overflow:hidden;
@@ -170,14 +191,25 @@
 
     .grid-block{
         transition: all 0.3s;
+        transition-timing-function: ease-in-out;
+        background-size:100%;
 
     }
 
     .grid-block:hover{
-        transform: scale(1.03);
+        //transform: scale(1.03);
+        background-size:105%;
         opacity:0.8;
     }
 }
+.grid-block--fullwidth .grid-block__zoom{
+    .grid-block:hover{
+        //transform: scale(1.03);
+        background-size:102%;
+    }
+}
+
+
 
 .grid-block--catalogue{
     padding-left:rem-calc($rem-base);
@@ -189,5 +221,21 @@
 
     .grid-block__title{
         width:100%;
+        font-size:rem-calc($rem-base);
+    }
+}
+
+.manufacture-grid{
+    margin-top:rem-calc($rem-base*2);
+}
+
+.grid-block:not(.grid-block--fullwidth).grid-block--manufacture{
+    height:auto;
+    padding-bottom:0px;
+    margin-bottom:rem-calc($rem-base*3);
+
+    .grid-block__title{
+        position:inherit;
+        width:90%;
     }
 }

@@ -9,21 +9,24 @@
 
 get_header(); ?>
 
-<div id="single-post" role="main">
+<div id="page-full-width" role="main">
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 	<article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
-		<header>
-			<h1 class="entry-title"><?php the_title(); ?></h1>
-			<?php // foundationpress_entry_meta(); ?>
-		</header>
 		<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
 		<div class="entry-content">
-
- 		<?php// get_template_part( 'parts/featured-image' ); ?>
-
-		<?php the_content(); ?>
+          <div class="row collapse">
+              <div class="columns small-12 large-10 large-offset-1">
+                	<header>
+                		<h1 class="entry-title"><?php the_title(); ?></h1>
+                		<?php // foundationpress_entry_meta(); ?>
+                	</header>
+                  <div class="page-content">
+                      <?php the_content(); ?>
+                  </div>
+              </div>
+          </div>
 		</div>
 		<footer>
 			<?php wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ), 'after' => '</p></nav>' ) ); ?>
@@ -36,6 +39,6 @@ get_header(); ?>
 <?php endwhile;?>
 
 <?php do_action( 'foundationpress_after_content' ); ?>
-<?php get_sidebar(); ?>
+<?php // get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>

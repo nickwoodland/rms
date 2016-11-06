@@ -15,8 +15,8 @@
         align-items: center;
 
         strong{
-            font-size:rem-calc(25px);
-            font-weight:400;
+            font-size:rem-calc($rem-base*1.2);
+            font-weight:800;
         }
     }
 }

@@ -67,14 +67,14 @@
     }
 
     a{
-        font-size:rem-calc(22px);
+        font-size:rem-calc(27px);
         color: $supply;
         text-transform: lowercase;
-        font-weight:800;
+        font-weight:400;
         font-family: $body-font-family;
 
         @include breakpoint(medium) {
-          font-size:rem-calc(26px);
+          font-size:rem-calc(27px);
         }
     }
 
@@ -96,18 +96,18 @@
         margin-top:rem-calc(12px);
         margin-bottom:rem-calc(12px);
         min-width:380px;
-        
+
     }
 
     .entry-title{
-        font-size:rem-calc(36px);
+        font-size:rem-calc(26px);
         margin-bottom:0px;
         text-transform: capitalize;
         line-height:1;
     }
 
     .entry-subtitle{
-        font-size:rem-calc(18px);
+        font-size:rem-calc(16px);
         font-family:$body-font-family;
         font-weight:600;
         text-transform: uppercase;
@@ -150,8 +150,8 @@
 
 article.page{
     .entry-content{
-        font-family:$body-font-family;
-        font-size:rem-calc(22);
+        font-family:$bulk-font-family;
+        font-size:rem-calc($rem-base);
         margin:0px auto;
     }
 

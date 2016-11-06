@@ -82,6 +82,10 @@ $respond: #d01132;
 $manufacture: #838281;
 $supply: #3fa9bc;
 
+$red: $respond;
+$blue: $supply;
+$grey: $manufacture;
+
 $success-color: #3adb76;
 $warning-color: #ffae00;
 $alert-color: #ec5840;
@@ -96,6 +100,7 @@ $body-font-color: #818285;
 
 $body-font-family: 'caviar_dreamsregular', Helvetica, Roboto, Arial, sans-serif;
 $secondary-font-family: $body-font-family;
+$bulk-font-family: Helvetica, Arial, sans-serif;
 $body-antialiased: true;
 
 $global-margin: 1rem;

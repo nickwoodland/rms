@@ -72,7 +72,7 @@
     }
 
     .tech-spec__content{
-        font-family: $secondary-font-family;
+        font-family: $bulk-font-family;
         font-size:rem-calc(18px);
     }
 }
@@ -106,7 +106,7 @@
 .product-ref{
     font-size:rem-calc($rem-base*1.5);
     padding:$rem-base;
-    border-radius: $rem-base;
+    //border-radius: $rem-base;
     background-color: $primary-color;
     color: $white;
     position:relative;

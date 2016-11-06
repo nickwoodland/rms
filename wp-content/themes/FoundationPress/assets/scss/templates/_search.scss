@@ -3,10 +3,14 @@
         h2{
             line-height:1;
             margin-bottom: 0px;
+            font-size:rem-calc($rem-base);
         }
     }
 
     hr{
         margin:rem-calc(8px) auto;
     }
+}
+.search-heading{
+    font-size:rem-calc(26px);
 }

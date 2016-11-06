@@ -10,6 +10,9 @@ if($post_type):
         $page = get_page_by_path('catalogues');
     endif;
 endif;
+if(is_home()){
+    $page = get_page_by_path('case-studies');
+}
 if($page):
     $title = $page->post_title;
     $subtitle = get_post_meta($page->ID, '_page_subtitle', true);
