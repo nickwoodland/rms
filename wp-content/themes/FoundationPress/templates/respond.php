@@ -5,6 +5,7 @@ Template Name: Respond
 get_header();
 $respond_graphic = get_post_meta($post->ID, '_respond_graphic', true);
 $respond_heading = get_post_meta($post->ID, '_respond_heading', true);
+$respond_link = get_post_meta($post->ID, '_respond_link', true);
 ?>
 <div id="page-full-width" role="main">
 
@@ -15,15 +16,19 @@ $respond_heading = get_post_meta($post->ID, '_respond_heading', true);
       <?php do_action( 'foundationpress_page_before_entry_content' ); ?>
       <?php // get_template_part( 'parts/featured-image' ); ?>
       <div class="entry-content">
+
           <div class="row collapse">
-              <div class="columns small-12 large-10 large-offset-1">
-                  <div class="page-content">
-                      <?php the_content(); ?>
-                  </div>
+
+              <div class="columns medium-12 xlarge-10 xlarge-offset-1">
+
                     <?php if($respond_graphic): ?>
+
                         <?php $phone = of_get_option('contact_telephone'); ?>
                         <?php $email = of_get_option('contact_email'); ?>
+
+
                         <div class="respond__graphic" style="background-image:url('<?php echo $respond_graphic; ?>')">
+                            <?php if($respond_link){?><a class="respond__link" href="<?php echo $respond_link; ?>"></a><?php }?>
                             <div class="respond__flex">
                                 <div class="respond__details">
                                     <?php if($respond_heading): ?>
@@ -31,7 +36,7 @@ $respond_heading = get_post_meta($post->ID, '_respond_heading', true);
                                     <?php endif; ?>
 
                                     <?php if($phone): ?>
-                                        <a class="respond__phone"href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
+                                        <a class="respond__phone" href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
                                     <?php endif; ?>
 
                                     <?php if($email): ?>
@@ -40,9 +45,16 @@ $respond_heading = get_post_meta($post->ID, '_respond_heading', true);
                                 </div>
                             </div>
                         </div>
-                    <?php endif; ?>
+
+                <?php endif; ?>
+
+                <div class="page-content">
+                  <?php the_content(); ?>
+                </div>
+
               </div>
           </div>
+
       </div>
       <footer>
           <?php wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ), 'after' => '</p></nav>' ) ); ?>

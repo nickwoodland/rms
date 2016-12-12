@@ -125,7 +125,51 @@ function optionsframework_options() {
 		'class' => 'mini',
 		'type' => 'text');
 
+	$options[] = array(
+		'name' => __('Font Sizes', 'options_framework_theme'),
+		'type' => 'heading');
 
+	$options[] = array(
+		'name' => __('Product Title Grid', 'options_framework_theme'),
+		'id' => 'prod_title_size_grid',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Product Title Single', 'options_framework_theme'),
+		'id' => 'prod_title_size_single',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Product Accessories Heading', 'options_framework_theme'),
+		'id' => 'prod_accessories_size',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Case Studies Title Grid', 'options_framework_theme'),
+		'id' => 'case_studies_title_size_grid',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Case Studies Title Single', 'options_framework_theme'),
+		'id' => 'case_studies_title_size_single',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Nothing Found Text', 'options_framework_theme'),
+		'id' => 'nothing_found_size',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
 
 
 	/**

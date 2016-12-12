@@ -30,6 +30,8 @@ get_header(); ?>
 <?php $painting_finishing = get_page_by_path('painting-finishing'); ?>
 
 <?php $product_type_terms = get_terms('product-types',$product_type_args ); ?>
+<?php $title_font_size = of_get_option('prod_title_size_grid'); ?>
+
 <div id="page-full-width" role="main">
 
         <?php include(locate_template('parts/banner-header-archive.php')); ?>
@@ -53,7 +55,7 @@ get_header(); ?>
                                 <article class="grid-block" data-interchange="<?php echo $grid_interchange_string; ?>">
                                     <div class="grid-block__inner">
                                         <a class="grid-block__link" href="<?php echo get_permalink($painting_finishing->ID); ?>">
-                                            <h3 class="grid-block__title"><?php echo get_the_title($painting_finishing->ID); ?></h3>
+                                            <h3 class="grid-block__title" <?php echo($title_font_size ? 'style="font-size:'. $title_font_size .'"' : '')?> ><?php echo get_the_title($painting_finishing->ID); ?></h3>
                                         </a>
                                     </div>
                                 </article>

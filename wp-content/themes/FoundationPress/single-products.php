@@ -23,6 +23,8 @@ get_header(); ?>
 <?php $accessories_meta = get_post_meta($post->ID, $prefix.'select_accessory', true); ?>
 <?php $related_meta = get_post_meta($post->ID, $prefix.'select_r_products', true); ?>
 <?php $tech_spec_meta = get_post_meta($post->ID, 'tech_spec_group', true); ?>
+<?php $title_font_size = of_get_option('prod_title_size_single'); ?>
+<?php $accessories_font_size = of_get_option('prod_accessories_size'); ?>
 
 <div id="page-full-width" class="single-product" role="main">
 	<?php do_action( 'foundationpress_before_content' ); ?>
@@ -37,7 +39,7 @@ get_header(); ?>
 
     			<div class="row xxlarge-collapse product__heading">
     				<header class="columns medium-4 large-3">
-    					<h2 class="entry-title"><?php the_title(); ?></h2>
+    					<h2 class="entry-title" <?php echo($title_font_size ? 'style="font-size:'. $title_font_size .'"' : '')?> ><?php the_title(); ?></h2>
     				</header>
     				<div class="columns medium-8 large-9">
     					<?php if($finishes_meta != false): ?>
@@ -102,7 +104,7 @@ get_header(); ?>
     			<?php endif; ?>
 
     			<?php if($accessories_meta != false): ?>
-    				<h3 class="product-accessories__heading"><?php the_title(); ?> accessories</h3>
+    				<h3 class="product-accessories__heading" <?php echo($accessories_font_size ? 'style="font-size:'. $accessories_font_size .'"' : '')?>><?php the_title(); ?> accessories</h3>
     				<div id="product-accessories" class="product-accessories__wrapper row row--flush landmark--large">
     					<?php include(locate_template('parts/product-accessories-loop.php')); ?>
     				</div>

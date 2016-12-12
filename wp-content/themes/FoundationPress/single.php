@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-
+<?php $title_font_size = of_get_option('case_studies_title_size_single'); ?>
 <div id="page-full-width" role="main">
 
 <?php do_action( 'foundationpress_before_content' ); ?>
@@ -19,7 +19,7 @@ get_header(); ?>
           <div class="row collapse">
               <div class="columns small-12 large-10 large-offset-1">
                 	<header>
-                		<h1 class="entry-title"><?php the_title(); ?></h1>
+                		<h1 class="entry-title"  <?php echo($title_font_size ? 'style="font-size:'. $title_font_size .'"' : '')?> ><?php the_title(); ?></h1>
                 		<?php // foundationpress_entry_meta(); ?>
                 	</header>
                   <div class="page-content">

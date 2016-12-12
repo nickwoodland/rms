@@ -12,7 +12,7 @@
         <article class="grid-block" data-interchange="<?php echo $grid_interchange_string; ?>">
             <div class="grid-block__inner">
                 <a class="grid-block__link" href="<?php echo get_term_link($grid_term); ?>">
-                    <h3 class="grid-block__title"><?php echo $grid_term->name; ?></h3>
+                    <h3 class="grid-block__title" <?php echo($title_font_size ? 'style="font-size:'. $title_font_size .'"' : '')?> ><?php echo $grid_term->name; ?></h3>
                 </a>
             </div>
         </article>

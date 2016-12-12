@@ -1,6 +1,6 @@
 .respond__graphic{
     height:0px;
-    padding-bottom:91%;
+    padding-bottom:60%;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -21,31 +21,43 @@
     right:0px;
 }
 
+.respond__link{
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    z-index: 20;
+}
+
 .respond__details{
     margin-top:-5%;
-    margin-left:9%;
+    margin-left:1%;
     width:auto;
     height:auto;
     text-align: center;
+    z-index:999;
 
     .respond__heading{
         color: $red;
-        font-size:rem-calc(26px);
+        font-size:rem-calc(22px);
         font-family: $body-font-family;
         font-weight:800;
     }
 
     .respond__phone{
         color: $blue;
-        font-size:rem-calc(24px);
+        font-size:rem-calc(18px);
         font-family: $body-font-family;
         font-weight:800;
+        z-index:999;
     }
 
     .respond__email{
         color: $red;
-        font-size:rem-calc(16px);
+        font-size:rem-calc(12px);
         font-family: $body-font-family;
+        z-index:999;
     }
 
     .respond__phone, .respond__email{
@@ -55,17 +67,17 @@
     @include breakpoint(xxlarge) {
 
         .respond__heading{
-            font-size:rem-calc(36px);
+            font-size:rem-calc(28px);
 
         }
 
         .respond__phone{
-            font-size:rem-calc(34px);
+            font-size:rem-calc(24px);
 
         }
 
         .respond__email{
-            font-size:rem-calc(24px);
+            font-size:rem-calc(16px);
         }
 
     }

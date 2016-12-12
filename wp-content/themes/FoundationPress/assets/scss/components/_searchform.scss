@@ -1,7 +1,9 @@
 .search__wrapper{
-    display:inline-block;
+    display:block;
     width:22px;
     height:22px;
+    float:right;
+    margin-top:rem-calc(14px);
 }
 #searchform{
 

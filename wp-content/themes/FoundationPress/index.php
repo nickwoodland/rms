@@ -20,6 +20,7 @@ get_header(); ?>
 
 	<?php if ( have_posts() ) : ?>
 
+        <?php $title_font_size = of_get_option('case_studies_title_size_grid'); ?>
 		<div class="row collapse">
 
 			<?php include(locate_template('parts/news-post-loop.php')); ?>

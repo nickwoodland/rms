@@ -40,4 +40,11 @@ function respond_metaboxes() {
         'id'   => $prefix . 'heading',
         'type' => 'text',
     ) );
+
+    $cmb->add_field( array(
+        'name' => 'Link',
+        'desc' => '',
+        'id'   => $prefix . 'link',
+        'type' => 'text',
+    ) );
 }

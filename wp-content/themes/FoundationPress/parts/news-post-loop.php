@@ -15,7 +15,7 @@
         <article class="grid-block" data-interchange="<?php echo $grid_interchange_string; ?>">
             <div class="grid-block__inner">
                 <a class="grid-block__link" href="<?php the_permalink(); ?>">
-                    <h3 class="grid-block__title"><?php the_title(); ?></h3>
+                    <h3 class="grid-block__title" <?php echo($title_font_size ? 'style="font-size:'. $title_font_size .'"' : '')?> ><?php the_title(); ?></h3>
                 </a>
             </div>
         </article>

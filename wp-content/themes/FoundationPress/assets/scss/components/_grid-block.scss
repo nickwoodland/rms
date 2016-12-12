@@ -86,13 +86,14 @@
         }
 
         h3{
+            font-size:rem-calc(14px);
         }
 
         h4{
-            margin-top:rem-calc(8px);
+            margin-top:rem-calc(10px);
             font-family: $body-font-family;
             text-transform:uppercase;
-            font-size:rem-calc(17px);
+            font-size:rem-calc(14px);
             font-weight:800;
         }
 
@@ -237,5 +238,22 @@
     .grid-block__title{
         position:inherit;
         width:90%;
+    }
+}
+
+
+@include breakpoint(large) {
+    .grid-block--circle .grid-block__title{
+        h3{
+            font-size:rem-calc(32px);
+        }
+
+        h4{
+            margin-top:rem-calc(8px);
+            font-family: $body-font-family;
+            text-transform:uppercase;
+            font-size:rem-calc(17px);
+            font-weight:800;
+        }
     }
 }

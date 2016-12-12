@@ -138,8 +138,8 @@
 }
 
 .flex-menu{
-    display:inline-block;
-    margin-right:rem-calc(24px);
+    display:block;
+    margin-right:-14px;
     ul:first-child{
         display:flex;
         flex-direction:row;

@@ -10,10 +10,10 @@
  */
 
 ?>
-
+<?php $nothing_found_size = of_get_option('nothing_found_size'); ?>
 <article class="nothing-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php _e( 'Nothing Found', 'foundationpress' ); ?></h1>
+		<h1 class="page-title" <?php echo($nothing_found_size ? 'style="font-size:'. $nothing_found_size .'"' : '')?>><?php _e( 'Nothing Found', 'foundationpress' ); ?></h1>
 	</header>
 
 	<div class="page-content">
