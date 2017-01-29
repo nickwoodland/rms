@@ -40,7 +40,7 @@ $respond_link = get_post_meta($post->ID, '_respond_link', true);
                                     <?php endif; ?>
 
                                     <?php if($email): ?>
-                                        <a class="respond__email" href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
+                                        <a class="respond__email" href="mailto:<?php echo $email; ?>">email</a>
                                     <?php endif; ?>
                                 </div>
                             </div>

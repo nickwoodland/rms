@@ -2,6 +2,7 @@
 <?php global $wp_query;?>
 <?php $post_count = count($wp_query->posts); ?>
 <?php $i = 0; ?>
+<?php $title_font_size = of_get_option('case_studies_title_size_grid'); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 

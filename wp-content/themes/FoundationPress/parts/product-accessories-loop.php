@@ -1,3 +1,4 @@
+<?php $accessories_font_size = of_get_option('prod_grid_titles_size'); ?>
 <?php $accessories_count = count($accessories_meta); ?>
 <?php $i = 0; ?>
 <?php $product_id = $post->ID; ?>
@@ -25,7 +26,7 @@
                 <a href="<?php echo $accessory_link; ?>">
                     <img data-interchange="<?php echo $accessory_interchange_string; ?>" />
                     <div class="accessory-listing__title">
-                        <h4><?php the_title(); ?></h4>
+                        <h4 <?php echo($accessories_font_size ? 'style="font-size:'. $accessories_font_size .'"' : '')?>><?php the_title(); ?></h4>
                     </div>
                 </a>
             </div>

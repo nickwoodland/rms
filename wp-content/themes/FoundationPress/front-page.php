@@ -91,6 +91,7 @@ $secondary_banners = get_post_meta($post->ID, 'banner_block_group', true);
                     <?php $banner_image_id = false; ?>
                     <?php $grid_interchange_string = false; ?>
                     <?php $banner_title_colour = false; ?>
+                    <?php $grid_heading_font_size = of_get_option('general_grid_heading_size'); ?>
 
                     <?php if(isset($secondary_banner['title'])): ?>
                         <?php $banner_title = $secondary_banner['title']; ?>

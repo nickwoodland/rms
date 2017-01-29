@@ -17,7 +17,7 @@
 
 <div class="footer__contact">
     <span class="footer__address">
-        RMS Electrical
+        RMS Ltd
         <?php if($add1 && "" != $add1): ?>
             <?php echo $add1; ?>
         <?php endif; ?>

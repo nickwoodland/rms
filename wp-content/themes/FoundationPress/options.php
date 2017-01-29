@@ -125,9 +125,33 @@ function optionsframework_options() {
 		'class' => 'mini',
 		'type' => 'text');
 
+
+
+
 	$options[] = array(
 		'name' => __('Font Sizes', 'options_framework_theme'),
 		'type' => 'heading');
+
+    $options[] = array(
+		'name' => __('General Headings (Pages & News)', 'options_framework_theme'),
+		'id' => 'general_headings_size',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('General Text (Pages & News)', 'options_framework_theme'),
+		'id' => 'general_text_size',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('General Grid Titles (Good News, Front Page, Product listing & Partners Grid)', 'options_framework_theme'),
+		'id' => 'general_grid_heading_size',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
 
 	$options[] = array(
 		'name' => __('Product Title Grid', 'options_framework_theme'),
@@ -137,15 +161,22 @@ function optionsframework_options() {
 		'type' => 'text');
 
 	$options[] = array(
-		'name' => __('Product Title Single', 'options_framework_theme'),
-		'id' => 'prod_title_size_single',
+		'name' => __('Product Subheadings', 'options_framework_theme'),
+		'id' => 'prod_general_heading_size',
 		'std' => '',
 		'class' => 'mini',
 		'type' => 'text');
 
 	$options[] = array(
-		'name' => __('Product Accessories Heading', 'options_framework_theme'),
-		'id' => 'prod_accessories_size',
+		'name' => __('Product General Text', 'options_framework_theme'),
+		'id' => 'prod_general_text_size',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Product Grid Titles (Related & Accessories)', 'options_framework_theme'),
+		'id' => 'prod_grid_titles_size',
 		'std' => '',
 		'class' => 'mini',
 		'type' => 'text');

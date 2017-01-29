@@ -1,11 +1,12 @@
 <?php $subtitle = get_post_meta($post->ID, '_page_subtitle', true); ?>
 <?php $subtitle_colour = get_post_meta($post->ID, '_page_title_colour', true); ?>
 <?php $slider_images = get_post_meta($post->ID, '_page_slide_images', true); ?>
+<?php $title_font_size = of_get_option('general_headings_size'); ?>
 <header class="bg--header header--subtitle <?php echo $subtitle_colour; ?> <?php echo(!$slider_images ? 'header--margin' : ''); ?>">
     <div class="row row--pad">
         <div class="columns small-12">
           <div class="header__inner">
-               <h1 class="entry-title"><?php the_title(); ?></h1>
+               <h1 class="entry-title" <?php echo($body_font_size ? 'style="font-size:'. $body_font_size .'"' : '')?>><?php the_title(); ?></h1>
                <?php if($subtitle): ?>
                    <h2 class="entry-subtitle"><?php echo $subtitle; ?></h2>
                <?php endif; ?>

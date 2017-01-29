@@ -1,3 +1,4 @@
+<?php $body_font_size = of_get_option('prod_general_text_size'); ?>
 <?php foreach($tech_spec_meta as $tech ): ?>
 
     <?php $tech_title = (isset($tech['title']) && "" != $tech['title']  ?  $tech['title'] : false); ?>
@@ -22,7 +23,7 @@
         <?php endif; ?>
 
         <?php if($tech_content): ?>
-            <div class="columns <?php echo ($tech_image ? 'medium-10' : 'small-12'); ?> tech-spec__content">
+            <div class="columns <?php echo ($tech_image ? 'medium-10' : 'small-12'); ?> tech-spec__content"  <?php echo($body_font_size ? 'style="font-size:'. $body_font_size .'"' : '')?>>
                 <?php echo apply_filters('the_content', $tech_content); ?>
             </div>
         <?php endif; ?>

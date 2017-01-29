@@ -9,6 +9,7 @@
 
 get_header(); ?>
 <?php $title_font_size = of_get_option('case_studies_title_size_single'); ?>
+<?php $body_font_size = of_get_option('general_text_size'); ?>
 <div id="page-full-width" role="main">
 
 <?php do_action( 'foundationpress_before_content' ); ?>
@@ -22,7 +23,7 @@ get_header(); ?>
                 		<h1 class="entry-title"  <?php echo($title_font_size ? 'style="font-size:'. $title_font_size .'"' : '')?> ><?php the_title(); ?></h1>
                 		<?php // foundationpress_entry_meta(); ?>
                 	</header>
-                  <div class="page-content">
+                  <div class="page-content" <?php echo($body_font_size ? 'style="font-size:'. $body_font_size .'"' : '')?>>
                       <?php the_content(); ?>
                   </div>
               </div>

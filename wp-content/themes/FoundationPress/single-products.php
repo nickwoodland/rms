@@ -23,8 +23,9 @@ get_header(); ?>
 <?php $accessories_meta = get_post_meta($post->ID, $prefix.'select_accessory', true); ?>
 <?php $related_meta = get_post_meta($post->ID, $prefix.'select_r_products', true); ?>
 <?php $tech_spec_meta = get_post_meta($post->ID, 'tech_spec_group', true); ?>
+
 <?php $title_font_size = of_get_option('prod_title_size_single'); ?>
-<?php $accessories_font_size = of_get_option('prod_accessories_size'); ?>
+<?php $headings_font_size = of_get_option('prod_general_heading_size'); ?>
 
 <div id="page-full-width" class="single-product" role="main">
 	<?php do_action( 'foundationpress_before_content' ); ?>
@@ -97,14 +98,14 @@ get_header(); ?>
     			</div>
 
     			<?php if($related_meta != false): ?>
-    				<h3>you will also require</h3>
+    				<h3 <?php echo($headings_font_size ? 'style="font-size:'. $headings_font_size .'"' : '')?>>you will also require</h3>
     				<div id="product-accessories" class="product-accessories__wrapper row row--flush landmark--large">
     					<?php include(locate_template('parts/product-related-loop.php')); ?>
     				</div>
     			<?php endif; ?>
 
     			<?php if($accessories_meta != false): ?>
-    				<h3 class="product-accessories__heading" <?php echo($accessories_font_size ? 'style="font-size:'. $accessories_font_size .'"' : '')?>><?php the_title(); ?> accessories</h3>
+    				<h3 class="product-accessories__heading" <?php echo($headings_font_size ? 'style="font-size:'. $headings_font_size .'"' : '')?>><?php the_title(); ?> accessories</h3>
     				<div id="product-accessories" class="product-accessories__wrapper row row--flush landmark--large">
     					<?php include(locate_template('parts/product-accessories-loop.php')); ?>
     				</div>
@@ -112,13 +113,13 @@ get_header(); ?>
 
     			<?php if($tech_spec_meta != false): ?>
     				<div id="product-description" class="product-tech-spec__wrapper row landmark--large">
-    					<h3>product information</h3>
+    					<h3 <?php echo($headings_font_size ? 'style="font-size:'. $headings_font_size .'"' : '')?>>product information</h3>
     					<?php include(locate_template('parts/product-tech-spec-loop.php')); ?>
     				</div>
     			<?php endif; ?>
 
     			<div id ="product-quote" class="product-enquiry__wrapper" >
-    				<h3>quote request</h3>
+				<h3 <?php echo($headings_font_size ? 'style="font-size:'. $headings_font_size .'"' : '')?>>quote request</h3>
     				<div class="columns small-12">
     					<?php gravity_form( 1, false, false, false, null, false); ?>
     				</div>
